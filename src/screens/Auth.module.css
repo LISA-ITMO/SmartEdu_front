@@ -1,0 +1,156 @@
+.auth__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.auth__auth {
+    background-color: #DBE3F7;
+    border-radius: 30px 0px 0px 30px;
+    width: 412px;
+    height: 477px;
+
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth__register {
+    background-color: #3F5CA4;
+    border-radius: 0px 30px 30px 0px;
+    width: 412px;
+    height: 477px;
+    
+    padding-top: 25px;
+}
+
+.auth__register__inner {
+    animation: start 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+@keyframes start {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.auth__start_heading {
+    color: #DBE3F7;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    margin: 30px 0px;
+}
+
+.auth__start_text {
+    width: 316px;
+    color: #DBE3F7;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    margin: 40px 0px;
+}
+
+.auth__heading {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+.auth__input {
+    margin: 10px 0px;
+    background-color: #DEDEDE;
+    width: 281px;
+    height: 48px;
+    padding: 10px;
+    border: 0px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.auth__forget_pass {
+    color: #142D6A;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 10px;
+}
+
+.auth__forget_pass:hover {
+    transition: 0.5s ease-in;
+    border-bottom: 1px solid black;
+}
+
+.button {
+    border: 0px;
+    border-radius: 50px;
+    background-color: #3F5CA4;
+
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #DBE3F7;
+}
+
+.button:hover {
+    transition: 0.3s;
+    background-color: #29417c;
+    cursor: pointer;
+}
+
+.button:active {
+    transition: 0.05s;
+    background-color: #041f60;
+}
+
+.auth__enter {
+    width: 219px;
+    height: 44px;
+}
+
+.auth__links {
+    margin: 20px 0px;
+    width: 135px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register__heading {
+    color: #DBE3F7;
+}
+
+.register__enter {
+    width: 241px;
+    height: 39px;
+    border: 2px solid #DBE3F7;
+    margin-top: 30px;
+}
