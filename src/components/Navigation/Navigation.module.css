@@ -1,0 +1,59 @@
+.nav {
+    padding: 28px 62px 28px 45px;
+    background-color:  #1A1D22;
+    border-right: 5px solid #171A1F;
+}
+
+.heading {
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+}
+
+.menu_list {
+    user-select: none;
+}
+
+.menu_item {
+    padding: 12px 0px 12px 40px;
+    color: #5B5F6A;
+    font-size: 15px;
+    list-style-type: none;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.menu_item::before {
+    position: absolute;
+    content: url("/point.svg");
+    top: 13px;
+    left: 0px;
+}
+
+.menu_item:hover {
+    cursor: pointer;
+    background-color: #171A1F;
+    border-radius: 10px;
+    transition: .1s ease-in-out;
+}
+
+.menu_item_active {
+    font-weight: 600;
+    color: #F5F8FC;
+    transition: .5s ease-in-out;
+}
+
+.menu_item_active::before {
+    content: url("/point_active.svg");
+    animation: pointAnim 0.5s;
+}
+
+@keyframes pointAnim {
+    from {
+        transform: scale(0.5, 0.5);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+

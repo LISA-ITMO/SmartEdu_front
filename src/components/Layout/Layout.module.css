@@ -1,0 +1,15 @@
+.layout {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #12151C;
+}
+
+.container {
+    margin: 0px auto;
+    max-width: 935px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}

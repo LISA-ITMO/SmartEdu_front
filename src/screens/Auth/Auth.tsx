@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styles from "./Auth.module.css"
-import GoogleSVG from "../assets/Google.svg"
-import GitHubSVG from "../assets/GitHub.svg"
+import GoogleSVG from "../../assets/Google.svg"
+import GitHubSVG from "../../assets/GitHub.svg"
 
 function Auth() {
 
