@@ -4,38 +4,40 @@ import { useLocation, useNavigate } from "react-router-dom"
 
 function Navigation() {
     
-    const location = useLocation() // Мега костыль, переделать
-    let defalt_active = [true, false, false, false, false]
-    const navigate = useNavigate()
-    if (location.pathname === "/find_task") {
-        defalt_active = [true, false, false, false, false]
-    } else if (location.pathname === "/my_task") {
-        defalt_active = [false, true, false, false, false]
-    } else if (location.pathname === "/price") {
-        defalt_active = [false, false, true, false, false]
-    } else if (location.pathname === "/about_license") {
-        defalt_active = [false, false, false, true, false]
-    } else if (location.pathname === "/how_to_add") {
-        defalt_active = [false, false, false, false, true]
+    const menuItems = {
+        "/find_task": "Find task!",
+        "/my_task": "My Task", 
+        "/price": "Price",
+        "/about_license": "About license",
+        "/how_to_add": "How to add"
     }
+    
+    const location = useLocation() // Мега костыль, переделать
+    const navigate = useNavigate()
+    let defalt_active = [
+        location.pathname === Object.keys(menuItems)[0], 
+        location.pathname === Object.keys(menuItems)[1], 
+        location.pathname === Object.keys(menuItems)[2], 
+        location.pathname === Object.keys(menuItems)[3], 
+        location.pathname === Object.keys(menuItems)[4]
+    ]
 
     const [active, setActive] = useState(defalt_active)
-    const menuItems = ["Find task!", "My Task", "Price", "About license", "How to add"]
-    const routes = ["/find_task", "/my_task", "/price", "/about_license", "/how_to_add"]
 
     return (
         <nav className={styles.nav}>
             <h2 className={styles.heading}>Menu</h2>
             <ul className={styles.menu_list}>
-                {menuItems.map((item, index) => {
+                {Object.keys(menuItems).map((key : string, index) => {
                     const arr = new Array(5).fill(false)
                     arr[index] = true
+                    const text = menuItems[key as keyof typeof menuItems]
                     return <li className={active[index] ? styles.menu_item + " " + styles.menu_item_active : styles.menu_item} onClick={
-                            () => {setActive(arr)
-                            navigate(routes[index])
-                        }}>
-                        {item}
-                    </li>
+                                    () => {setActive(arr)
+                                    navigate(key)
+                                }}>
+                                {text}
+                            </li>
                 })}
             </ul>
         </nav>
